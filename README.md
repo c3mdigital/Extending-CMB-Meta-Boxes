@@ -10,7 +10,7 @@ Extending-CMB-Meta-Boxes
 
 ###Instructions for use
 - Add the master file and lib folder to the same directory your CMB Meta Boxes init file resides
-- Include the master file by adding `require_once( 'extensions.php' )` to your function that checks `if (!class_exists( 'cmb_Meta_Box' )`
+- Include the master file by adding `require_once( 'extensions.php' )` You can put the include at the bottom of your metabox functions.  It includes init.php only if the class doesn't already excist to avoid conflicts.
 
 ###Instructions for submitting your field typs
 - Clone or check out the repository create a new file in the lib directory using the nameing convention `{field-type}.php`
