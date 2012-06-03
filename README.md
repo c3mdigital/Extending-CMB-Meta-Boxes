@@ -17,7 +17,8 @@ Extending-CMB-Meta-Boxes
 - Add your render and validation (if needed) functions to the file.
 - See [Adding your own field types](https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress/wiki/Adding-your-own-field-types) for instructions on how to add a field type.
 - Name your render function `{field_type}` This should be the same as the file name without the .php (The initialization file adds prefixes when it renders)
-- Name your validate function `validate{field_type}`
+- Name your validate function `validate_{field_type}`
+- Add your field type to the `$extensions array();` to cmb_metabox_extensions.php and submit a pull request. 
 - The filters and actions will be added by the initialization file in one array using the name of the extension in the file name.
 - Please use [WordPress Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards) whenever possible
 - Please add PhpDOC inline documentation to your functions
