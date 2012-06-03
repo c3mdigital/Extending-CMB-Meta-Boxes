@@ -23,18 +23,18 @@
   function cmb_metabox_extensions() {
 	  
 	  $extensions = array(
-	  /** @var array   'field_type' => array(  
-	  	  @var string  'name' 			=> 'The Name of your New Field',
-	  	  @var string  'description' 	=> 'Describe your field (optional)',
-	  	  @var bool	   'validate'		=> true /** @var bool 
+/** 
+ * @var array   'field_type' => array(  
+ * @var string      'name'         => 'The Name of your New Field',
+ * @var string      'description'  => 'Describe your field (optional)',
+ * @var bool	    'validate'     => true 
 	  		), */
 	  	'sidebar_select' => array(
-	  		'name'			=> 'Sidebar Select',
+	  		'name'	        => 'Sidebar Select',
 	  		'description'	=> 'Select box that grabs all registered sidebars',
-	  		'validate'		=> true,
+	  		'validate'      => true,
 	  		),
 	  );
-	  
 	  
 	  foreach( $extensions as $key => $value ) {
 		  include_once( 'lib/'.$key.'php');
@@ -48,7 +48,7 @@
   
   function cmb_get_cmb() {
 	  if ( ! class_exists( 'CMB_Meta_Box' ) )
-	  		require_once 'init.php';
+	  	require_once 'init.php';
   }
   
   add_action( 'init', 'cmb_get_cmb', 9999 );
