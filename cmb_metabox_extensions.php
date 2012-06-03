@@ -37,12 +37,12 @@
 	  );
 	  
 	  foreach( $extensions as $key => $value ) {
-		  include_once( 'lib/'.$key.'php');
+		  include_once( 'lib/'.$key.'.php');
 		  
 		  if ( $value['validate'] ) 
-		  		add_filter( 'cmb_validate_'.$key, 'cmb_validate_'.$key );
+		  		add_filter( 'cmb_validate_'.$key, 'validate_'.$key );
 		  		
-		  add_action( 'cmb_render_'.$key, 'cmb_'.$key );
+		  add_action( 'cmb_render_'.$key, $key, 10, 2 );
 	  }
   }
   
